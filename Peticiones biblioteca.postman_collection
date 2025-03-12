@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "e237b723-a6bb-4b90-961e-090dc2b4e1cb",
+		"name": "Peticiones Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42575821"
+	},
+	"item": [
+		{
+			"name": "Peticions Spring Data",
+			"item": [
+				{
+					"name": "GET Ejercicio3",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET Ejercicio4",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET Ejercicio5",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET Ejercicio6",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

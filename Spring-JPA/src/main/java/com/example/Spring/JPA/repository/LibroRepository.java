@@ -23,21 +23,21 @@ public interface LibroRepository extends JpaRepository<Libro, Long> {
 
     //Consultas del Ejercicio 6
     //Buscar libros según un año en específico
-    @Query("SELECT l FROM Libro l where year(l.anioPublicacion)=:anio")
-    List<Libro> findLibrosPublicadosUnAnio(@Param("anio") int anio);
+    @Query("SELECT l.titulo FROM Libro l where year(l.anioPublicacion)=:anio")
+    List<?> findLibrosPublicadosUnAnio(@Param("anio") int anio);
 
     //Buscar libros según un isb en específico
-    @Query("SELECT l FROM Libro l where l.isbn=:isbn")
-    List<Libro> findLibrosIsbn(@Param("isbn") String isbn);
+    @Query("SELECT l.titulo FROM Libro l where l.isbn=:isbn")
+    List<?> findLibrosIsbn(@Param("isbn") String isbn);
 
     //Buscar libros según una editorial(RBA) en específico
-    @Query("SELECT l FROM Libro l JOIN Editorial e on l.editorial.id = e.id AND e.nombreEditorial=:nombreEditorial")
-    List<Libro> findLibrosEditorial(@Param("nombreEditorial") String nombreEditorial);
+    @Query("SELECT l.titulo FROM Libro l JOIN Editorial e on l.editorial.id = e.id AND e.nombreEditorial=:nombreEditorial")
+    List<?> findLibrosEditorial(@Param("nombreEditorial") String nombreEditorial);
 
     //Buscar libros según una editorial(RBA) y año(1986) en específico
-    @Query("SELECT l FROM Libro l WHERE l.editorial.nombreEditorial = :nombreEditorial " +
+    @Query("SELECT l.titulo FROM Libro l WHERE l.editorial.nombreEditorial = :nombreEditorial " +
             "AND YEAR(l.anioPublicacion) = :anio")
-    List<Libro> findLibrosEditorialAnio(@Param("nombreEditorial") String nombreEditorial,@Param("anio") Integer anio);
+    List<?> findLibrosEditorialAnio(@Param("nombreEditorial") String nombreEditorial,@Param("anio") Integer anio);
 
 
 }
